@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86152/Desktop/COD/Lab/Lab7/src/bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86152/Desktop/COD/Lab/Lab7/src/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86152/Desktop/COD/Lab/Lab7/src/mem_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v:198]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v:211]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v:210]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v:216]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v:226]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v:241]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/86152/Desktop/COD/Lab/Lab7/src/cache_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb

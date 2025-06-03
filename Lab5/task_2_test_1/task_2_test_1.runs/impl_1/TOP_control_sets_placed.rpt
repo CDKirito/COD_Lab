@@ -1,0 +1,160 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Fri Apr 18 23:44:51 2025
+| Host         : Aurora running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TOP_control_sets_placed.rpt
+| Design       : TOP
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    82 |
+|    Minimum number of control sets                        |    82 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   120 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    82 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     5 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |    34 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    33 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              81 |           37 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             190 |           76 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1617 |          487 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+-----------------------------------------------------------------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+|   Clock Signal  |                                            Enable Signal                                            |            Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+-----------------------------------------------------------------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+|  CLK_25MHZ_BUFG | pdu/rx_queue/rx_dq_counter_reg[0]_1                                                                 | rst_IBUF[0]                            |                2 |              4 |         2.00 |
+|  CLK_25MHZ_BUFG | pdu/uart_rx/FSM_onehot_status_cur[4]_i_1_n_2                                                        | rst_IBUF[0]                            |                2 |              5 |         2.50 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[2][6]_i_1_n_2                                                                | rst_IBUF[0]                            |                2 |              7 |         3.50 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[0][6]_i_1_n_2                                                                | rst_IBUF[0]                            |                2 |              7 |         3.50 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/FSM_sequential_print_cs[3]_i_1_n_2                                                  | rst_IBUF[0]                            |                4 |              7 |         1.75 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[1][6]_i_1_n_2                                                                | rst_IBUF[0]                            |                2 |              7 |         3.50 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[20][6]_i_1_n_2                                                               | rst_IBUF[0]                            |                2 |              7 |         3.50 |
+|  CLK_25MHZ_BUFG | mmio/mmio_pdu_data_valid                                                                            | rst_IBUF[0]                            |                2 |              8 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/uart_rx/data[7]_i_1_n_2                                                                         | rst_IBUF[0]                            |                3 |              8 |         2.67 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[30][3]_i_1_n_2                                                               | rst_IBUF[0]                            |                3 |              9 |         3.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_enqueue_gen/rear                                                                             | rst_IBUF[0]                            |                3 |             10 |         3.33 |
+|  CLK_25MHZ_BUFG | pdu/rx_enqueue_gen/signal_delay1_reg_0                                                              | rst_IBUF[0]                            |                3 |             10 |         3.33 |
+|  CLK_25MHZ_BUFG | pdu/tx_enqueue_gen/signal_delay2_reg_0                                                              | rst_IBUF[0]                            |                3 |             10 |         3.33 |
+|  CLK_25MHZ_BUFG | pdu/tx_enqueue_gen/rear                                                                             | rst_IBUF[0]                            |                4 |             10 |         2.50 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_192_255_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_64_127_0_2_i_1_n_2                                                      |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_960_1023_0_2_i_1_n_2                                                    |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_0_63_0_2_i_1__0_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_192_255_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_320_383_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_576_639_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_128_191_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_448_511_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_640_703_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_64_127_0_2_i_1__0_n_2                                                   |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_704_767_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_512_575_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_576_639_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_384_447_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_704_767_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_960_1023_0_2_i_1__0_n_2                                                 |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_832_895_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_896_959_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_448_511_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_384_447_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_0_63_0_2_i_4_n_2                                                        |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_256_319_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_512_575_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_256_319_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/uart_rx/counter                                                                                 | rst_IBUF[0]                            |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_320_383_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_832_895_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/fifo_queue_reg_768_831_0_2_i_1__0_n_2                                                  |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_640_703_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_768_831_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_896_959_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/uart_tx/counter                                                                                 | rst_IBUF[0]                            |                4 |             12 |         3.00 |
+|  CLK_25MHZ_BUFG | pdu/tx_queue/fifo_queue_reg_128_191_0_2_i_1_n_2                                                     |                                        |                3 |             12 |         4.00 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[22][6]_i_1_n_2                                                               | rst_IBUF[0]                            |                6 |             14 |         2.33 |
+|  CLK_25MHZ_BUFG |                                                                                                     | pdu/fsm_counter[0]_i_1_n_2             |                4 |             16 |         4.00 |
+|  CLK_25MHZ_BUFG |                                                                                                     | segment/counter[0]_i_1__2_n_2          |                5 |             17 |         3.40 |
+|  CLK_25MHZ_BUFG |                                                                                                     |                                        |               12 |             17 |         1.42 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[5][6]_i_1_n_2                                                                | rst_IBUF[0]                            |                7 |             21 |         3.00 |
+|  CLK_25MHZ_BUFG | pdu/rx_dq_counter[31]_i_2_n_2                                                                       | pdu/rx_queue/SR[0]                     |                8 |             28 |         3.50 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/rx_dq_counter_reg[1][0]                                                                | pdu/pdu_decode/rx_data_hex[31]_i_1_n_2 |                7 |             32 |         4.57 |
+|  CLK_25MHZ_BUFG | pdu/rx_queue/head_reg[9]_7[0]                                                                       | pdu/pdu_decode/rx_data_dec[31]_i_1_n_2 |                9 |             32 |         3.56 |
+|  CLK_25MHZ_BUFG | pdu/pdu_decode/E[0]                                                                                 | rst_IBUF[0]                            |                7 |             32 |         4.57 |
+|  CLK_25MHZ_BUFG | pdu/cur_access_addr[0]_i_2_n_2                                                                      | pdu/cur_access_addr0                   |                8 |             32 |         4.00 |
+|  n_1_1606_BUFG  |                                                                                                     |                                        |               13 |             32 |         2.46 |
+|  CLK_25MHZ_BUFG | pdu/pdu_decode/base_addr0                                                                           | rst_IBUF[0]                            |               10 |             32 |         3.20 |
+|  CLK_25MHZ_BUFG | pdu/pdu_decode/length0                                                                              | rst_IBUF[0]                            |               13 |             32 |         2.46 |
+|  CLK_25MHZ_BUFG | cpu/ex_mem/dmem_we_out_reg[0]_1[0]                                                                  | rst_IBUF[0]                            |               11 |             32 |         2.91 |
+|  CLK_25MHZ_BUFG | cpu/ex_mem/alu_res_out_reg[4]_0[0]                                                                  | mmio/cpu_uart_valid_reg_0              |                7 |             32 |         4.57 |
+|  CLK_25MHZ_BUFG | cpu/ex_mem/E[0]                                                                                     | rst_IBUF[0]                            |               14 |             32 |         2.29 |
+|  CLK_25MHZ_BUFG | pdu/bp_reg/bp_20                                                                                    | pdu/pdu_decode/SR[0]                   |                8 |             32 |         4.00 |
+|  n_0_1607_BUFG  |                                                                                                     |                                        |               12 |             32 |         2.67 |
+|  CLK_25MHZ_BUFG | pdu/bp_reg/bp_valid[1]_i_2_n_2                                                                      | pdu/pdu_decode/decode_cs_reg[0]_2      |               16 |             33 |         2.06 |
+|  CLK_25MHZ_BUFG | pdu/bp_reg/bp_valid[0]_i_1_n_2                                                                      | pdu/pdu_decode/decode_cs_reg[0]_2      |                9 |             33 |         3.67 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/local_print_data[62]_i_1_n_2                                                        | rst_IBUF[0]                            |               15 |             35 |         2.33 |
+|  CLK_25MHZ_BUFG | pdu/hex2uart/counter[3]_i_1__1_n_2                                                                  | rst_IBUF[0]                            |                9 |             36 |         4.00 |
+|  CLK_25MHZ_BUFG | cpu/ex_mem/dmem_we_out_reg[0]_0[0]                                                                  | rst_IBUF[0]                            |               17 |             40 |         2.35 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[28][6]_i_1_n_2                                                               | rst_IBUF[0]                            |               22 |             42 |         1.91 |
+|  CLK_25MHZ_BUFG | pdu/pdu_decode/pdu_ctrl_cs_reg[1][0]                                                                | rst_IBUF[0]                            |               24 |             64 |         2.67 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/buffer[19][6]_i_1_n_2                                                               | rst_IBUF[0]                            |               24 |             98 |         4.08 |
+|  CLK_25MHZ_BUFG | instruction_memory/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_255_0_0_i_1_n_0   |                                        |               32 |            128 |         4.00 |
+|  CLK_25MHZ_BUFG | instruction_memory/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_256_511_0_0_i_1_n_0 |                                        |               32 |            128 |         4.00 |
+|  CLK_25MHZ_BUFG | data_memory/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_255_0_0_i_1_n_0          |                                        |               32 |            128 |         4.00 |
+|  CLK_25MHZ_BUFG | data_memory/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_256_511_0_0_i_1_n_0        |                                        |               32 |            128 |         4.00 |
+|  CLK_25MHZ_BUFG | cpu/mem_wb/rf_we_out_reg[0]_0                                                                       |                                        |               17 |            132 |         7.76 |
+|  CLK_25MHZ_BUFG |                                                                                                     | rst_IBUF[0]                            |               67 |            157 |         2.34 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/pdu_ctrl_cs_reg[7]                                                                  | cpu/id_ex/SR[0]                        |               91 |            313 |         3.44 |
+|  CLK_25MHZ_BUFG | pdu/info_sender/pdu_ctrl_cs_reg[7]                                                                  | rst_IBUF[0]                            |              101 |            407 |         4.03 |
++-----------------+-----------------------------------------------------------------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+
+

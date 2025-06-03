@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Apr 11 18:36:19 2025
+# Process ID: 21604
+# Current directory: C:/Users/86152/Desktop/CS/Lab/Lab4/test_1/test_1.runs/DATA_MEM_synth_1
+# Command line: vivado.exe -log DATA_MEM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DATA_MEM.tcl
+# Log file: C:/Users/86152/Desktop/CS/Lab/Lab4/test_1/test_1.runs/DATA_MEM_synth_1/DATA_MEM.vds
+# Journal file: C:/Users/86152/Desktop/CS/Lab/Lab4/test_1/test_1.runs/DATA_MEM_synth_1\vivado.jou
+# Running On: Aurora, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16892 MB
+#-----------------------------------------------------------
+source DATA_MEM.tcl -notrace

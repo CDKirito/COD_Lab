@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+$finish called at time : 50 ns : File "C:/Users/86152/Desktop/CS/Lab/Lab2/task_4/task_4.srcs/sim_1/new/top_tb.v" Line 49

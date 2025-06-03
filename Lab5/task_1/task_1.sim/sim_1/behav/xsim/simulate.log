@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+Test 1: rf_rd0 = deadbeef (expected: DEADBEEF)
+Test 1: rf_rd0 after clock = deadbeef (expected: DEADBEEF)
+Test 2: rf_rd1 = cafebabe (expected: CAFEBABE)
+Test 2: rf_rd1 after clock = cafebabe (expected: CAFEBABE)
+Test 3: rf_rd0 = 00000000 (expected: 00000000)
+Test 4: rf_rd0 = 00000000 (expected: 00000000)
+Test 5: rf_rd0 = deadbeef (expected: DEADBEEF)
+$stop called at time : 90 ns : File "C:/Users/86152/Desktop/CS/Lab/Lab5/task_1/task_1.srcs/sim_1/new/REGFILE_tb.v" Line 97

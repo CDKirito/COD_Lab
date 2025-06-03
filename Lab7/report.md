@@ -64,7 +64,7 @@
     assign r_tag = hit ? r_tag_way[hit_way_idx] : // 命中时选择对应路的标签
                          r_tag_way[replace_way];  // 未命中时选择替换路的标签
 ```
-- `generate` 部分实现参数化组相联 cache，每个分路有一个 `Tag Bram` 和一个 `Data Bram`
+- `generate` 部分实现__参数化__组相联 cache，每个分路有一个 `Tag Bram` 和一个 `Data Bram`
 - `hit` 的逻辑为：只要有一条分路在 `READ` 和 `WRITE` 期间命中即命中
 - 通过只让目标路的写使能信号为 1，来写入相应分路
 - `dirty` 只需看替换路是否脏
@@ -158,33 +158,3 @@
 ```
 - 类似于一个计时器，让替换路一直循环
 - 与 FIFO 不同的是，前者所有组共享 `replace_way`，而后者是在组内循环
-
-## 三、不同替换策略优劣比较
-```verilog
-    reg [31:0] hit_counter; // 命中计数器
-    always @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
-            hit_counter <= 0;
-        end else if (hit) begin
-            hit_counter <= hit_counter + 1; // 每次命中计数器加1
-        end
-    end
-```
-- 在 `simple_cache.v` 模块中加一个命中计数器来计算命中率
-- 测试参数如下：
-```verilog
-MODE = 1 # 0:随机读写 1：模拟CPU伪顺序读写（会有不定期跳转，概率为BranchP）
-BranchP = 0.1 # 跳转概率，仅在MODE=1时有效，当BranchP = 0时，为顺序读写不会跳转
-READ_NUM   = 2000 # 读取次数
-WRITE_NUM  = 1000 # 写入次数
-
-# 内存参数
-WORD_WIDTH = 32 # 内存数据宽度
-DATA_WIDTH = 128 # 一行数据宽度
-
-# cache参数
-INDEX_WIDTH = 3
-LINE_OFFSET_WIDTH = 2
-SPACE_OFFSET = 2
-MEM_ADDR_WIDTH = 15
-```

@@ -4,7 +4,7 @@ May  7 2023
 15:24:31
 C:/Users/86152/Desktop/COD/Lab/Lab7/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,,,,,,,
 C:/Users/86152/Desktop/COD/Lab/Lab7/src/bram.v,1709293555,verilog,,C:/Users/86152/Desktop/COD/Lab/Lab7/src/mem.v,,bram,,,,,,,,
-C:/Users/86152/Desktop/COD/Lab/Lab7/src/cache_tb.v,1748790564,verilog,,,,cache_tb,,,,,,,,
+C:/Users/86152/Desktop/COD/Lab/Lab7/src/cache_tb.v,1748795824,verilog,,,,cache_tb,,,,,,,,
 C:/Users/86152/Desktop/COD/Lab/Lab7/src/mem.v,1713366437,verilog,,C:/Users/86152/Desktop/COD/Lab/Lab7/src/mem_bram.v,,mem,,,,,,,,
-C:/Users/86152/Desktop/COD/Lab/Lab7/src/mem_bram.v,1748795824,verilog,,C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v,,mem_bram,,,,,,,,
+C:/Users/86152/Desktop/COD/Lab/Lab7/src/mem_bram.v,1748947792,verilog,,C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v,,mem_bram,,,,,,,,
 C:/Users/86152/Desktop/COD/Lab/Lab7/src/simple_cache.v,1748795995,verilog,,C:/Users/86152/Desktop/COD/Lab/Lab7/src/cache_tb.v,,cache,,,,,,,,
